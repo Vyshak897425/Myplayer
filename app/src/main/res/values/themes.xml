@@ -16,8 +16,8 @@
 
     <style name="coolPinkNav" parent="Theme.MaterialComponents.Light">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/white</item>
-        <item name="colorPrimaryVariant">#D1386C</item>
+        <item name="colorPrimary">@color/cool_blue</item>
+        <item name="colorPrimaryVariant">@color/cool_blue</item>
         <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">#FB4885</item>

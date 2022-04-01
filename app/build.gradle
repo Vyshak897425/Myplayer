@@ -1,8 +1,11 @@
-plugins {
-    id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
-}
 
+apply plugin : "kotlin-android"
+apply plugin : "kotlin-android-extensions"
+apply plugin:  "com.android.application"
+apply plugin: 'org.jetbrains.kotlin.android.extensions'
+androidExtensions {
+    experimental = true
+}
 android {
     compileSdk 32
 
@@ -35,6 +38,8 @@ android {
     }
 
 }
+
+
 
 dependencies {
 
