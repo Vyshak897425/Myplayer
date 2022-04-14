@@ -1,9 +1,11 @@
 package com.vyshakPrabhu.myplayer
 
 import android.content.Context
+import android.content.Intent
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 
 import com.vyshakPrabhu.myplayer.databinding.FoldersViewBinding
@@ -13,6 +15,7 @@ class FoldersAdapter(private val context: Context, private var foldersList: Arra
     RecyclerView.Adapter<FoldersAdapter.MyHolder>() {
     class MyHolder (binding: FoldersViewBinding): RecyclerView.ViewHolder(binding.root){
         val folderName = binding.folderNameFV
+        val root = binding.root
 
     }
 
@@ -22,6 +25,11 @@ class FoldersAdapter(private val context: Context, private var foldersList: Arra
 
     override fun onBindViewHolder(holder: MyHolder, position: Int) {
         holder.folderName.text = foldersList[position].folderName
+        holder.root.setOnClickListener{
+            val intent = Intent(context,FoldersActivity::class.java)
+            intent.putExtra("position",position)
+            ContextCompat.startActivity(context,intent,null)
+        }
 
     }
 
